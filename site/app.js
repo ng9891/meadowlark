@@ -4,6 +4,7 @@ var handlebars = require('express3-handlebars')
 var fortune = require('./lib/fortune.js'); //Self-made module
 
 var app = express();
+app.set('port', process.env.PORT || 8888);
 
 //Set the view engine in Express to Handlebars
 app.engine('handlebars', handlebars.engine);
@@ -12,7 +13,6 @@ app.set('view engine', 'handlebars');
 //Setting public folder so middleware can fetch from there
 app.use(express.static(__dirname + '/public')); //static is a middleware of express
 
-app.set('port', process.env.PORT || 8888);
 
 //sets showTests variable for testing environment in Mocha
 app.use(function(req,res,next){
