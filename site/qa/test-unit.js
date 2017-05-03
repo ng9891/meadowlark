@@ -1,3 +1,4 @@
+//To run: mocha -u tdd -R spec qa/tests-unit.js
 var fortune = require ('../lib/fortune.js');
 var expect = require ('chai').expect;
 

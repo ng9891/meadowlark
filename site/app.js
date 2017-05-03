@@ -45,6 +45,12 @@ app.get('/tours/request-group-rate', function(req,res){
 	res.render('tours/request-group-rate');
 });
 
+//Route for Oregon Coast Tour Page
+app.get('/tours/oregon-coast', function(req,res){
+	res.render('tours/oregon-coast');
+	
+});
+
 //custom 404 page
 app.use(function(req,res,next){
 		res.status(404);
