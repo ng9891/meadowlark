@@ -28,7 +28,7 @@ app.get('/', function(req,res){
 
 //about page router
 app.get('/about',function(req,res){
-				//(PATH, obj)
+	//res.render(PATH, obj);
 	res.render('about', {
 				fortune: fortune.getFortune(),
 				pageTestScript:'/qa/tests-about.js'
