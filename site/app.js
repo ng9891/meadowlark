@@ -14,6 +14,12 @@ app.use(express.static(__dirname + '/public')); //static is a middleware of expr
 
 app.set('port', process.env.PORT || 8888);
 
+//sets showTests variable for testing environment in Mocha
+app.use(function(req,res,next){
+		res.locals.showTests = app.get('env') !== 'production' &&
+				req.query.test === '1';
+				next();
+});
 
 //Home page router
 app.get('/', function(req,res){
@@ -22,10 +28,12 @@ app.get('/', function(req,res){
 
 //about page router
 app.get('/about',function(req,res){
-	res.render('about', {fortune: fortune.getFortune() }); 
-				//(PATH, Obj)
+				//(PATH, obj)
+	res.render('about', {
+				fortune: fortune.getFortune(),
+				pageTestScript:'/qa/tests-about.js'
+	}); 			
 });
-
 
 //custom 404 page
 app.use(function(req,res,next){
