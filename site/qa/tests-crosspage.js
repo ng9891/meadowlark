@@ -1,4 +1,4 @@
-//NOT WORKING
+//NOT WORKING- Cross-page Tester
 
 var Browser = require ('zombie'),
 		assert = require('chai').assert;

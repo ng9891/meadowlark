@@ -13,6 +13,7 @@ app.set('view engine', 'handlebars');
 //Setting public folder so middleware can fetch from there
 app.use(express.static(__dirname + '/public')); //static is a middleware of express
 
+//if( app.thing == null ) console.log( 'bleat!' ); // Testing for JsHint
 
 //sets showTests (T or F) variable for testing environment in Mocha
 app.use(function(req,res,next){
