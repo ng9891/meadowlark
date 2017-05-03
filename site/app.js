@@ -23,6 +23,7 @@ app.use(function(req,res,next){
 				next();
 });
 //**************************************
+//form handling with POST
 app.use(require('body-parser')());
 
 app.get('/newsletter', function(req,res){
@@ -38,6 +39,7 @@ app.post('/process',function(req,res){
 });
 
 //**************************************
+
 //*************************************
 function getWeatherData(){
 	return {
