@@ -14,7 +14,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public')); //static is a middleware of express
 
 
-//sets showTests (T or F) variable for testing environment in Mocha
+//sets showTests variable for testing environment in Mocha
 app.use(function(req,res,next){
 		res.locals.showTests = app.get('env') !== 'production' &&
 				req.query.test === '1';
@@ -33,16 +33,6 @@ app.get('/about',function(req,res){
 				fortune: fortune.getFortune(),
 				pageTestScript:'/qa/tests-about.js'
 	}); 			
-});
-
-//Route for Hood River page
-app.get('/tours/hood-river', function(req,res){
-	res.render('tours/hood-river');
-});
-
-//Route for request tour rate
-app.get('/tours/request-group-rate', function(req,res){
-	res.render('tours/request-group-rate');
 });
 
 //custom 404 page
