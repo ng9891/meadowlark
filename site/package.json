@@ -1,0 +1,16 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "This is the json for the tutorial in the book \"Web development with Node and Express.0\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vT",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express3-handlebars": "^0.5.2",
+    "express4-handlebars": "^0.2.0"
+  }
+}
