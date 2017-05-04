@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Meadowlark Trave</title>
-	
+	{{{_sections.head}}}
 	{{#if showTests}}
 			<link rel="stylesheet" href="/vendor/mocha.css">
 	{{/if}}
@@ -12,6 +12,10 @@
 	<header><img src="/img/logo.png" alt="Meadlow Park"></header>
 	<p><h1>TEST: "{{pageTestScript}}" and {{showTests}}</h1></p>
 	{{{body}}}
+	
+	
+	{{{_sections.jquery}}}
+	
 	
 	{{#if showTests}}
 			<div id="mocha"></div>
